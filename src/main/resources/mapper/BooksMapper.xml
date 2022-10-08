@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.books.App.mapper.BooksMapper">
+
+    <resultMap id="BaseResultMap" type="com.books.App.entity.Books">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="booksname" column="booksname" jdbcType="VARCHAR"/>
+            <result property="price" column="price" jdbcType="DECIMAL"/>
+            <result property="author" column="author" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="cover" column="cover" jdbcType="VARCHAR"/>
+            <result property="userid" column="userId" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,booksname,price,
+        author,create_time,cover,userId
+    </sql>
+</mapper>
